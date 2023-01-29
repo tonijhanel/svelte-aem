@@ -42,7 +42,6 @@ a:hover {
 
 h1 {
 	font-size: 2rem;
-	text-align: center;
 }
 
 h2 {
@@ -158,3 +157,153 @@ button:focus:not(:focus-visible) {
 .adventure-item {
   flex-basis: 300px;
 }
+
+.adventure-item-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+	overflow: hidden;
+	margin-bottom: 7px;
+  }
+  
+  .adventure-item-label {
+	width: 100%;
+  }
+  
+  .adventure-item-length {
+	float: left;
+	width: 48%;
+  }
+  
+  .adventure-item-price {
+	float: right;
+	text-align: right;
+	width: 48%;
+  }
+  
+  .adventure-item-price::before {
+	content: "\0024";
+  }
+  
+  .adventure-item-title {
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+  }
+  
+  .adventure-item {
+	flex-basis: 300px;
+  }
+  
+  .adventure-item-image {
+	height: 250px;
+  }
+  
+  .adventure-detail-title {
+	margin-bottom: 1em;
+  }
+  .adventure-detail-info {
+	width: 25%;
+	float: left;
+  }
+  
+  .adventure-detail-info-label,
+  .adventure-detail-info-description {
+	border-left: 5px solid grey;
+  }
+  
+  .adventure-detail-info-label {
+	padding: 10px 0px 5px 20px;
+	text-transform: uppercase;
+  }
+  
+  .adventure-detail-info-description {
+	margin-bottom: 20px;
+	padding: 5px 0px 10px 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+  }
+  
+  .adventure-detail-info-price:before {
+	content: "\0024";
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+	line-height: 1.1;
+	color: #202020;
+  }
+  
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+	font-family: "Asar", Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	margin-top: 19px;
+	margin-bottom: 9.5px;
+  }
+  
+  .adventure-detail-content {
+	width: 75%;
+	float: left;
+  }
+  adventure-detail-content.img {
+	width: 100%;
+  }
+  
+  .adventure-detail-content h2 {
+	margin: 15px 0px 0px 0px;
+	padding: 0px;
+  }
+  
+  .adventure-detail-primaryimage {
+	width: 100%;
+  }
+  
+  .adventure-detail-close-button {
+	width: 24px;
+	float: right;
+	margin: 1em;
+	background: none;
+	border: none;
+  }
+  
+  #navMenu {
+	padding-top: 10px;
+  }
+  
+  .btn {
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: font-family-sans-serif;
+	border: none;
+	padding: 0.5em;
+	min-width: 4rem;
+	margin-right: 1rem;
+	cursor: pointer;
+  }
+  
+  .btn:hover,
+  .active {
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+  }
