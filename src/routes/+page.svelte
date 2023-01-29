@@ -1,7 +1,6 @@
 <script>
 	export let data;
 	const { adventures } = data;
-    console.log("data = " + adventures);
 </script>
 
 <h2>Current Adventures</h2>

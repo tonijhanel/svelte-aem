@@ -1,9 +1,7 @@
 <script>
 	export let data;
 	const { adventure } = data;
-    import wkndlogo from '$lib/images/wknd-logo-dk.svg';
     import closeBtn from '$lib/images/closebtn.svg';
-	import Header from '../../Header.svelte';
 </script>
 
 <div>
