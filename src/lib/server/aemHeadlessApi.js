@@ -23,7 +23,7 @@ const {
 
 
 export const aemHeadlessClient = new AEMHeadless({
-    serviceURL: NODE_APP_HOST_URI,
+    serviceURL: 'https://publish-p96606-e882934.adobeaemcloud.com',
     endpoint: '',           // Avoid non-persisted queries
     auth: setAuthorization() ,  // accessToken only set if the 2nd command line parameter is set
   
