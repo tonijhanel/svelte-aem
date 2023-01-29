@@ -28,22 +28,6 @@ const aemHeadlessClient = new AEMHeadless({
     auth: setAuthorization() ,  // accessToken only set if the 2nd command line parameter is set
   
 });
-/*
-async function getGraphQLAdventures() {
-    console.log("in graph ql");
-    let getData;
-    let parsedAdventure;
-    try {
-        console.log("in try");
-       getData = await aemHeadlessClient.runPersistedQuery('wknd-shared/adventures-all');
-             return getData;
-    } catch (error) {
-      // Handle the error any way you'd like
-      console.log("error=" + error);
-    }
-    
-  }*/
-
 
   export const load = async() =>{
         const allAdventures = async()=>{

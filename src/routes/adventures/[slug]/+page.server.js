@@ -1,0 +1,54 @@
+  import 'dotenv/config'
+  import AEMHeadless from '@adobe/aem-headless-client-nodejs';
+  const {
+      NODE_APP_HOST_URI,
+      NODE_APP_GRAPHQL_ENDPOINT,
+      NODE_APP_USE_PROXY,
+      NODE_APP_AUTH_METHOD,
+      NODE_APP_DEV_TOKEN,
+      NODE_APP_BASIC_AUTH_USER,
+      NODE_APP_BASIC_AUTH_PASS,
+    } = process.env;
+  
+    const setAuthorization = () => {
+      if (NODE_APP_AUTH_METHOD === "basic") {
+        return [NODE_APP_BASIC_AUTH_USER, NODE_APP_BASIC_AUTH_PASS];
+      } else if (NODE_APP_AUTH_METHOD === "dev-token") {
+        return NODE_APP_DEV_TOKEN;
+      } else {
+        // no authentication set
+        return;
+      }
+    };
+  
+  
+  const aemHeadlessClient = new AEMHeadless({
+      serviceURL: 'https://publish-p96606-e882934.adobeaemcloud.com',
+      endpoint: '',           // Avoid non-persisted queries
+      auth: setAuthorization() ,  // accessToken only set if the 2nd command line parameter is set
+    
+  });
+  
+    export const load = async({ params, fetch }) =>{
+          const adventureDetails = async()=>{
+              let adventuresRes;
+              try {
+                let query = "wknd-shared/adventure-by-slug;slug=" + params.slug;
+                  console.log("in try");
+                  adventuresRes = await aemHeadlessClient.runPersistedQuery(query);
+
+                  console.log(adventuresRes.data.adventureList.items);
+  //adventureDetail.data.adventureList.items
+                  return adventuresRes.data.adventureList.items;
+              } catch (error) {
+                // Handle the error any way you'd like
+                console.log("error=" + error);
+              }
+          }
+  
+          return {
+              adventure: adventureDetails(),
+          }
+  
+    }
+  
