@@ -3,7 +3,6 @@
 	const { adventures } = data;
     console.log("data = " + adventures);
 	import wkndlogo from '$lib/images/wknd-logo-dk.svg';
-
 </script>
 
 <div>
@@ -29,9 +28,3 @@
 {/each}
 </ul>
 </div>
-
-<style>
-
-
-    
-</style>
