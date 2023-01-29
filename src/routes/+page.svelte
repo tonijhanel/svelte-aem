@@ -2,15 +2,9 @@
 	export let data;
 	const { adventures } = data;
     console.log("data = " + adventures);
-	import wkndlogo from '$lib/images/wknd-logo-dk.svg';
 </script>
 
-<div>
-<img src={wkndlogo} alt="WKND LOGO"  class="logo"/>
-  <hr>
-  <h2>Current Adventures</h2>
-</div>
-
+<h2>Current Adventures</h2>
 <div class="adventures">
 <ul class="adventure-items">
   {#each adventures as adventure}

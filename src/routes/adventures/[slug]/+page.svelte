@@ -3,11 +3,10 @@
 	const { adventure } = data;
     import wkndlogo from '$lib/images/wknd-logo-dk.svg';
     import closeBtn from '$lib/images/closebtn.svg';
+	import Header from '../../Header.svelte';
 </script>
 
 <div>
-    <img src={wkndlogo} alt="WKND LOGO"  class="logo"/>
-    <hr>
     {#each adventure as adventureDetail}
     <div class="adventure-detail">
             <button class="adventure-detail-close-button">
