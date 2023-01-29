@@ -1,5 +1,4 @@
 import 'dotenv/config'
-import AEMHeadless from '@adobe/aem-headless-client-nodejs';
 import {  aemHeadlessClient } from '$lib/server/aemHeadlessApi';
 
   export const load = async() =>{

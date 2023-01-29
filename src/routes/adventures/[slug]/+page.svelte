@@ -11,7 +11,7 @@
     {#each adventure as adventureDetail}
     <div class="adventure-detail">
             <button class="adventure-detail-close-button">
-                <a href="/"><img src="{closeBtn}"></a>
+                <a href="/"><img src="{closeBtn}" alt="Close Button"></a>
             </button>
         <h1 class="adventure-detail-title">{adventureDetail.title}</h1>
         <div class="adventure-detail-info">
