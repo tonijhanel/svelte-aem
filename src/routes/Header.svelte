@@ -3,7 +3,7 @@
 </script>
 
 <div class="header">
-    <img src={wkndlogo} alt="WKND LOGO"  class="logo"/>
+    <a href="/"><img src={wkndlogo} alt="WKND LOGO"  class="logo"/></a>
       <hr>
 </div>
 <style>
